@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-timecop",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -37,5 +37,8 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "dependencies": {
+    "timecop": "git+https://git@github.com/jamesarosen/Timecop.js.git"
   }
 }
