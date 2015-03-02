@@ -1,25 +1,17 @@
-# Ember-cli-timecop
+## ember-cli-timecop
 
-This README outlines the details of collaborating on this Ember addon.
+This addon adds `Timecop` to the generated Ember CLI output (in `vendor.js`).
 
-## Installation
+### Installation / Usage
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+From within your Ember CLI application (must be > 0.0.34), run the following:
 
-## Running
+```bash
+npm install --save-dev ember-cli-timecop
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Add `Timecop` to your test .jshintrc.
 
-## Running Tests
+### References
 
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+* [Timecop.js](https://github.com/jamesarosen/Timecop.js)

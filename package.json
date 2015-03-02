@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/matteodepalo/ember-cli-timecop",
   "engines": {
     "node": ">= 0.10.0"
   },
