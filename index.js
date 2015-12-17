@@ -9,7 +9,8 @@ module.exports = {
   treeFor: function(name) {
     if (name !== 'vendor') { return; }
 
-    return this.treeGenerator(path.join(__dirname, 'node_modules'));
+    var assetsPath = require('path').join('timecop', 'timecop.js');
+    return this.treeGenerator(require.resolve('timecop').replace(assetsPath, ''));
   },
 
   included: function(app) {
