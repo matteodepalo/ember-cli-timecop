@@ -1,16 +1,18 @@
 /* jshint node: true */
 'use strict';
 
-var path = require('path');
-
 module.exports = {
   name: 'ember-cli-timecop',
 
-  treeFor: function(name) {
-    if (name !== 'vendor') { return; }
+  treeForVendor() {
+    var path = require('path');
+    var Funnel = require('broccoli-funnel');
+    var timecopPath = path.dirname(require.resolve('timecop'));
+    var baseTree = this.treeGenerator(timecopPath);
 
-    var assetsPath = require('path').join('timecop', 'timecop.js');
-    return this.treeGenerator(require.resolve('timecop').replace(assetsPath, ''));
+    return new Funnel(baseTree, {
+      destDir: 'timecop'
+    });
   },
 
   included: function(app) {
